@@ -1,0 +1,239 @@
+*{
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box;
+    font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: hsl(202, 86%, 94%);
+}
+
+.inputs p{
+    font-size: 14px;
+}
+
+.mortgage-calculator{
+    width: 70%;
+    height: fit-content;
+    background-color: white;
+    border-radius: 20px;
+}
+
+.mortgage-content{
+    display: flex;
+}
+
+.mortgage-content >*{
+    flex: 1;
+    padding: 40px;
+}
+
+.flex-display {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+.flex-display span{
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+#amount{
+    width: 100%;
+    padding: 5px 0 5px 40px;
+    outline: none;
+    border: none;
+}
+
+.euro {
+    position: relative;
+    overflow: hidden;
+    border: 1px solid hsl(203, 41%, 72%);
+    border-radius: 5px;
+    margin-top: 5px;
+    font-size: 14px;
+}
+
+.euro div{
+    background-color: hsl(202, 86%, 94%);
+    width: fit-content;
+    padding: 5px 10px;
+    position: absolute; 
+    top: 0;
+    left: 0;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+}
+
+.mortgage-interest {
+    display: flex; 
+    justify-content: space-between;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.mortgage-interest > * {
+    flex: 1;
+}
+
+.mortgage-interest input{
+    width: 100%;
+}
+
+#term{
+    width: 100%;
+    padding: 5px 0 5px 4px;
+    outline: none;
+    border: none;
+}
+
+.years {
+    position: relative;
+    overflow: hidden;
+    border: 1px solid hsl(203, 41%, 72%);
+    border-radius: 5px;
+    margin-top: 5px;
+}
+
+.years div{
+    background-color: hsl(202, 86%, 94%);
+    width: fit-content;
+    padding: 5px 10px;
+    font-size: 14px;
+    position: absolute; 
+    top: 0;
+    right: 0;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+}
+
+
+#rate{
+    width: 100%;
+    padding: 5px 0 5px 4px;
+    outline: none;
+    border: none;
+}
+
+.percent {
+    position: relative;
+    overflow: hidden;
+    border: 1px solid hsl(203, 41%, 72%);
+    border-radius: 5px;
+    margin-top: 5px;
+}
+
+.percent div{
+    background-color: hsl(202, 86%, 94%);
+    width: fit-content;
+    padding: 5px 10px;
+    position: absolute; 
+    font-size: 14px;
+    top: 0;
+    right: 0;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+}
+
+.type{
+    margin-top: 15px;
+}
+
+.type p{
+    margin-bottom: 5px;
+}
+
+.type label{
+    padding: 5px 10px;
+    display: flex;
+    align-items: center;
+    gap: 3px;
+    width: 100%;
+    border: 1px solid hsl(203, 41%, 72%);
+    border-radius: 5px;
+    margin-block: 5px;
+    font-size: 14px;
+}
+
+#border.active{
+    border-color: hsl(61, 70%, 52%);
+}
+
+#background.active{
+    background-color: hsl(61, 70%, 52%);   
+}
+
+button{
+    display: flex; 
+    align-items: center;
+    padding: 10px 30px;
+    margin-block: 20px;
+    border-radius: 20px;
+    border: none;
+    background: hsl(61, 70%, 52%);
+    gap: 10px;
+    font-weight: bold;
+}
+
+.result{
+    background-color: hsl(202, 55%, 16%);
+    border-bottom-left-radius: 50px;
+    color: white;
+    text-align: center;
+    align-content: center;
+}
+
+.result img{
+    height: 150px;
+}
+
+.result h2{
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.result p{
+    font-size: 13px;
+    color: hsl(202, 86%, 94%);
+    font-weight: 300;
+}
+
+@media (max-width: 1000px) {
+    .mortgage-calculator{
+        width: 90%;
+    }
+    .flex-display h3{
+        font-size: 15px;
+    }
+    .flex-display span{
+        font-size: 14px;
+    }
+    button{
+        font-size: 11px;
+    }
+}
+
+@media (max-width: 700px) {
+    .mortgage-calculator{
+        width: 100%;
+    }
+    .mortgage-content {
+        flex-direction: column;
+    }
+    .result{
+        border-bottom-left-radius: 0;
+    }
+    button{
+        font-size: 15px;
+        width: 100%;
+        justify-content: center;
+    }
+}
